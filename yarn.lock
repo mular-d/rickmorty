@@ -1755,6 +1755,11 @@ resolve@^2.0.0-next.3:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+rickmortyapi@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rickmortyapi/-/rickmortyapi-1.0.0.tgz#df7a4e335e9c9605304100309806d44d5fa2385d"
+  integrity sha512-1Qz7pjbJ1HmemkI8sgz+6Lx6TpJ47bu2hz2rmtduCgZCyXl+dD+Orc+0p2avLe/cXZBo7coFSo4sTST6nL8+gQ==
+
 rimraf@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
