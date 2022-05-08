@@ -11,17 +11,34 @@ function App() {
     )
     const json = await res.json()
     setCharacters(json.results)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [page])
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
     requestCharacters().catch(console.error)
-  }, [requestCharacters]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [requestCharacters])
 
   return (
     <div>
       {characters?.map((character) => {
         return <Character character={character} key={character.id} />
       })}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          requestCharacters()
+        }}
+      >
+        <button disabled={page <= 1} onClick={() => setPage((p) => p - 1)}>
+          Previous
+        </button>
+        <button disabled={page >= 42} onClick={() => setPage((p) => p + 1)}>
+          Next
+        </button>
+      </form>
     </div>
   )
 }
